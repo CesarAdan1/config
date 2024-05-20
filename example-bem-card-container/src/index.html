@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="">
+  <meta name="description" content="Articles saver">
+  <title>Explorer</title>
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
+  <link rel="icon" href="<%= require('./images/favicon.png')%>" type="image/png">
+</head>
+
+<body>
+<div class="root__section">
+  <main class="results">
+    <h3 class="results__title">Search Results</h3>
+    <div class="results__news">
+      <a href="#" class="card">
+        <div class="card__body">
+          <div class="card_image-wrapper">
+            <div class="card_img"></div>
+          </div>
+          <div class="card__icon"></div>
+          <p class="card__warning">Log in to save articles</p>
+          <div class="card_wrapper">
+            <p class="card_date">August 2, 2021</p>
+            <h4 class="card_title">Why do we use it?</h4>
+            <div class="card_text">It is a long established fact that a reader will be distracted by the readable content
+              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+              English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+              text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </div>
+          </div>
+        </div>
+        <p class="card_src">lipsum.com</p>
+      </a>
+      <a href="#" class="card">
+        <div class="card__body">
+          <div class="card_image-wrapper">
+            <div class="card_img"></div>
+          </div>
+          <div class="card__icon"></div>
+          <p class="card__warning">Log in to save articles</p>
+          <div class="card_wrapper">
+            <p class="card_date">August 2, 2021</p>
+            <h4 class="card_title">Why do we use it?</h4>
+            <div class="card_text">It is a long established fact that a reader will be distracted by the readable content
+              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+              English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+              text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </div>
+          </div>
+        </div>
+        <p class="card_src">lipsum.com</p>
+      </a>
+      <a href="#" class="card">
+        <div class="card__body">
+          <div class="card_image-wrapper">
+            <div class="card_img"></div>
+          </div>
+          <div class="card__icon"></div>
+          <p class="card__warning">Log in to save articles</p>
+          <div class="card_wrapper">
+            <p class="card_date">August 2, 2021</p>
+            <h4 class="card_title">Why do we use it?</h4>
+            <div class="card_text">It is a long established fact that a reader will be distracted by the readable content
+              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+              English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+              text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </div>
+          </div>
+        </div>
+        <p class="card_src">lipsum.com</p>
+      </a>
+      <a href="#" class="card">
+        <div class="card__body">
+          <div class="card_image-wrapper">
+            <div class="card_img"></div>
+          </div>
+          <div class="card__icon card__icon_marked"></div>
+          <p class="card__warning">Log in to save articles</p>
+          <div class="card_wrapper">
+            <p class="card_date">August 2, 2021</p>
+            <h4 class="card_title">Why do we use it?</h4>
+            <div class="card_text">It is a long established fact that a reader will be distracted by the readable content
+              of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+              distribution of letters, as opposed to using 'Content here, content here', making it look like readable
+              English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+              text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions
+              have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            </div>
+          </div>
+        </div>
+        <p class="card_src">lipsum.com</p>
+      </a>
+    </div>
+    <button class="button results__button">Show more</button>
+  </main>
+<div id="modal">
+  <section class="auth-form__wrapper auth-form__wrapper_hide" id="login-form">
+    <form class="auth-form" name="login">
+      <div class="auth-form__close" id="close-login-form"></div>
+      <h4 class="auth-form__title">Log in</h4>
+      <span class="auth-form__subtitle">E-mail</span>
+      <input class="auth-form__input" name="email" type="email" placeholder="Email" required>
+      <span class="auth-form__error-message" id="error-email-login">
+          Enter valid email
+        </span>
+      <span class="auth-form__subtitle">Password</span>
+      <input class="auth-form__input" name="password" type="password" placeholder="Password" required>
+      <span class="auth-form__error-message auth-form__error-message_hide" id="error-password-login">
+          The fiels is empty!
+        </span>
+      <span class="auth-form__error-message auth-form__error-message_usr-exists" id="error-not-logged">
+          Wrong email or password
+        </span>
+      <button class="button auth-form__button" name="login-button" type="submit" disabled>Log in</button>
+      <span class="auth-form__other-action">
+          or <span class="auth-form__other-action-click" id="open-signup-form">Sign up</span>
+        </span>
+    </form>
+  </section>
+
+  <section class="auth-form__wrapper auth-form__wrapper_hide" id="signup-form">
+    <form class="auth-form" name="signup">
+      <div class="auth-form__close" id="close-signup-form"></div>
+      <h4 class="auth-form__title">Sign up</h4>
+      <span class="auth-form__subtitle">E-mail</span>
+      <input class="auth-form__input" name="email" placeholder="Email" type="email" required>
+      <span class="auth-form__error-message auth-form__error-message_hide" id="error-email">Enter valid email!</span>
+      <span class="auth-form__subtitle">Password</span>
+      <input class="auth-form__input" name="password" type="password" placeholder="Password" minlength="8"
+             required>
+      <span class="auth-form__error-message" id="error-password">
+          The maximum length of password is 8!
+        </span>
+      <span class="auth-form__subtitle">Name</span>
+      <input class="auth-form__input" name="name" placeholder="Name" required minlength="2">
+      <span class="auth-form__error-message auth-form__error-message_hide" id="error-name">
+          Enter your name!
+        </span>
+      <span class="auth-form__error-message auth-form__error-message_usr-exists" id="error-register">
+          This user already exists!
+        </span>
+      <button class="button auth-form__button" name="signup-button" type="submit">Sign up</button>
+      <span class="auth-form__other-action">
+          or <span class="auth-form__other-action-click" id="open-login-form">Login</span>
+        </span>
+    </form>
+  </section>
+
+  <section class="auth-form__wrapper auth-form__wrapper_hide" id="signup-ok">
+    <form class="auth-form">
+      <div class="auth-form__close" id="close-signup-ok-form"></div>
+      <h4 class="auth-form__title">The user is registered!</h4>
+      <span class="auth-form__other-action auth-form__other-action_left">
+          <span class="auth-form__other-action-click" id="open-login-modal">Log in</span>
+        </span>
+    </form>
+  </section>
+</div>
+<script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+</body>
+
+</html>
